@@ -133,13 +133,19 @@
 <header>
   <h1>Torneo de Playa</h1>
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Beach_soccer_pictogram.svg/120px-Beach_soccer_pictogram.svg.png" alt="Logo">
-</header>
-
 <div style="text-align: center; margin-top: 20px;">
-  <button onclick="document.getElementById('audioFondo').play()" style="background-color:#415a77; color:white; padding:10px 20px; border:none; border-radius:5px; font-size:1em; cursor:pointer;">
-    ▶️ Reproducir audio del torneo
-  </button>
+  <button onclick="document.getElementById('audioFondo').play()" style="background-color:#2a6f97; color:white; padding:10px 15px; margin:5px; border:none; border-radius:5px; font-size:1em;">▶️ Play</button>
+  
+  <button onclick="document.getElementById('audioFondo').pause()" style="background-color:#b21818; color:white; padding:10px 15px; margin:5px; border:none; border-radius:5px; font-size:1em;">⏸️ Pause</button>
+  
+  <button onclick="document.getElementById('audioFondo').currentTime = 0" style="background-color:#415a77; color:white; padding:10px 15px; margin:5px; border:none; border-radius:5px; font-size:1em;">🔁 Reiniciar</button>
 </div>
+
+<audio id="audioFondo" loop>
+  <source src="AUDIO-2025-07-12-18-02-04.mp3" type="audio/mpeg">
+  Tu navegador no soporta audio HTML.
+</audio>
+</header>
 
 <audio id="audioFondo" loop>
   <source src="AUDIO-2025-07-12-18-02-04.mp3" type="audio/mpeg">
