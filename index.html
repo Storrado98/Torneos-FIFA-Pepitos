@@ -135,6 +135,17 @@
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Beach_soccer_pictogram.svg/120px-Beach_soccer_pictogram.svg.png" alt="Logo">
 </header>
 
+<div style="text-align: center; margin-top: 20px;">
+  <button onclick="document.getElementById('audioFondo').play()" style="background-color:#415a77; color:white; padding:10px 20px; border:none; border-radius:5px; font-size:1em; cursor:pointer;">
+    ▶️ Reproducir audio del torneo
+  </button>
+</div>
+
+<audio id="audioFondo" loop>
+  <source src="AUDIO-2025-07-12-18-02-04.mp3" type="audio/mpeg">
+  Tu navegador no soporta audio HTML.
+</audio>
+
 <div class="tabs">
   <button onclick="showTab('fase')">Fase Inicial</button>
   <button onclick="showTab('elim')">Eliminatorias</button>
