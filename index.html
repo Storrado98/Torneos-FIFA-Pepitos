@@ -15,6 +15,7 @@
     header {
       background-color: #1b263b;
       padding: 20px;
+      position: relative;
       text-align: center;
     }
     header h1 {
@@ -22,8 +23,35 @@
       color: #ffffff;
       font-size: 2em;
     }
-    section {
-      margin: 20px;
+    header img {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      height: 60px;
+    }
+    .tabs {
+      text-align: center;
+      background-color: #1b263b;
+      padding: 10px;
+    }
+    .tabs button {
+      background-color: #415a77;
+      color: white;
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    .tabs button:hover {
+      background-color: #778da9;
+    }
+    .tab-content {
+      display: none;
+      padding: 20px;
+    }
+    .tab-content.active {
+      display: block;
     }
     h2 {
       color: #ffffff;
@@ -50,92 +78,108 @@
     tr:hover {
       background-color: #324b6b;
     }
-    .fecha-titulo {
-      margin-top: 40px;
-      font-size: 1.5em;
-      color: #e0e1dd;
+    .bracket {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+    .round {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 15px;
+    }
+    .match {
+      border: 1px solid #415a77;
+      padding: 10px;
+      margin: 10px 0;
+      width: 160px;
+      text-align: center;
+      background-color: #1b263b;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Torneo de Playa - Zona Inicial</h1>
-  </header>
+<header>
+  <h1>Torneo de Playa</h1>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Beach_soccer_pictogram.svg/120px-Beach_soccer_pictogram.svg.png" alt="Logo">
+</header>
 
-  <section>
-    <h2>Tabla de Posiciones</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Pos</th>
-          <th>Equipo</th>
-          <th>Pts</th>
-          <th>GF</th>
-          <th>GC</th>
-          <th>DG</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>1</td><td>Los Delfines</td><td>9</td><td>12</td><td>3</td><td>+9</td></tr>
-        <tr><td>2</td><td>Arena FC</td><td>7</td><td>10</td><td>5</td><td>+5</td></tr>
-        <tr><td>3</td><td>La Brisa</td><td>6</td><td>9</td><td>6</td><td>+3</td></tr>
-        <tr><td>4</td><td>Sombras del Mar</td><td>5</td><td>8</td><td>7</td><td>+1</td></tr>
-        <tr><td>5</td><td>Costanera Boys</td><td>4</td><td>6</td><td>8</td><td>-2</td></tr>
-        <tr><td>6</td><td>Los Tiburones</td><td>3</td><td>5</td><td>10</td><td>-5</td></tr>
-        <tr><td>7</td><td>Mar y Sol</td><td>2</td><td>4</td><td>9</td><td>-5</td></tr>
-        <tr><td>8</td><td>Bruma FC</td><td>1</td><td>3</td><td>11</td><td>-8</td></tr>
-        <!-- Agregá más equipos si querés hasta llegar a 12 -->
-      </tbody>
-    </table>
-  </section>
+<div class="tabs">
+  <button onclick="showTab('fase')">Fase Inicial</button>
+  <button onclick="showTab('elim')">Eliminatorias</button>
+</div>
 
-  <section>
-    <h2 class="fecha-titulo">Fecha 1</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Local</th>
-          <th>Goles L</th>
-          <th>Rojas L</th>
-          <th>Goles V</th>
-          <th>Rojas V</th>
-          <th>Visitante</th>
-          <th>Sede</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Los Delfines</td><td>3</td><td>0</td><td>1</td><td>0</td><td>Bruma FC</td><td>Playa Norte</td></tr>
-        <tr><td>Arena FC</td><td>2</td><td>1</td><td>2</td><td>0</td><td>Mar y Sol</td><td>Playa Sur</td></tr>
-        <!-- más partidos -->
-      </tbody>
-    </table>
+<div id="fase" class="tab-content active">
+  <h2>Tabla de Posiciones</h2>
+  <table>
+    <thead>
+      <tr><th>Pos</th><th>Equipo</th><th>Pts</th><th>GF</th><th>GC</th><th>DG</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>Los Delfines</td><td>9</td><td>12</td><td>3</td><td>+9</td></tr>
+    </tbody>
+  </table>
 
-    <h2 class="fecha-titulo">Fecha 2</h2>
-    <table>
-      <tbody>
-        <tr><td>La Brisa</td><td>1</td><td>0</td><td>0</td><td>0</td><td>Costanera Boys</td><td>Playa Este</td></tr>
-        <tr><td>Sombras del Mar</td><td>0</td><td>0</td><td>3</td><td>1</td><td>Los Tiburones</td><td>Playa Norte</td></tr>
-        <!-- más partidos -->
-      </tbody>
-    </table>
+  <h2>Fecha 1</h2>
+  <table>
+    <thead>
+      <tr><th>Local</th><th>Goles L</th><th>Rojas L</th><th>Goles V</th><th>Rojas V</th><th>Visitante</th><th>Sede</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Los Delfines</td><td>3</td><td>0</td><td>1</td><td>0</td><td>Bruma FC</td><td>Playa Norte</td></tr>
+    </tbody>
+  </table>
+</div>
 
-    <h2 class="fecha-titulo">Fecha 3</h2>
-    <table>
-      <tbody>
-        <tr><td>Los Delfines</td><td>2</td><td>0</td><td>2</td><td>0</td><td>La Brisa</td><td>Playa Oeste</td></tr>
-        <!-- más partidos -->
-      </tbody>
-    </table>
+<div id="elim" class="tab-content">
+  <h2>Eliminatorias - Bracket</h2>
+  <div class="bracket">
+    <div class="round">
+      <h3>Octavos</h3>
+      <div class="match">Equipo 1 vs Equipo 12</div>
+      <div class="match">Equipo 2 vs Equipo 11</div>
+    </div>
+    <div class="round">
+      <h3>Cuartos</h3>
+      <div class="match">Ganador 1 vs Equipo 5</div>
+      <div class="match">Ganador 2 vs Equipo 6</div>
+    </div>
+    <div class="round">
+      <h3>Semis</h3>
+      <div class="match">Semi 1</div>
+      <div class="match">Semi 2</div>
+    </div>
+    <div class="round">
+      <h3>Triangular Final</h3>
+      <div class="match">Equipo A vs Equipo B</div>
+      <div class="match">Equipo B vs Equipo C</div>
+      <div class="match">Equipo A vs Equipo C</div>
+    </div>
+  </div>
 
-    <h2 class="fecha-titulo">Fecha 4</h2>
-    <table>
-      <tbody>
-        <tr><td>Bruma FC</td><td>0</td><td>0</td><td>4</td><td>0</td><td>Sombras del Mar</td><td>Playa Norte</td></tr>
-        <!-- más partidos -->
-      </tbody>
-    </table>
-  </section>
+  <h2>Tabla Triangular Final</h2>
+  <table>
+    <thead>
+      <tr><th>Equipo</th><th>PJ</th><th>PG</th><th>PE</th><th>PP</th><th>GF</th><th>GC</th><th>DG</th><th>Pts</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Equipo A</td><td>2</td><td>1</td><td>1</td><td>0</td><td>3</td><td>1</td><td>+2</td><td>4</td></tr>
+      <tr><td>Equipo B</td><td>2</td><td>1</td><td>0</td><td>1</td><td>2</td><td>2</td><td>0</td><td>3</td></tr>
+      <tr><td>Equipo C</td><td>2</td><td>0</td><td>1</td><td>1</td><td>1</td><td>3</td><td>-2</td><td>1</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<script>
+function showTab(tab) {
+  document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+  document.getElementById(tab).classList.add('active');
+}
+</script>
 
 </body>
 </html>
