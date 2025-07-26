@@ -58,6 +58,34 @@
       border-bottom: 2px solid #415a77;
       padding-bottom: 5px;
     }
+    .bracket-stage {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .round {
+      margin: 0 20px;
+    }
+    .round h3 {
+      text-align: center;
+      color: #e0e1dd;
+      margin-bottom: 15px;
+    }
+    .match {
+      background-color: #1b263b;
+      border-left: 4px solid #778da9;
+      margin-bottom: 20px;
+      padding: 10px;
+      width: 200px;
+      color: #e0e1dd;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    }
+    .match span {
+      display: block;
+      text-align: left;
+      padding: 4px 0;
+    }
     table {
       width: 100%;
       border-collapse: collapse;
@@ -77,27 +105,6 @@
     }
     tr:hover {
       background-color: #324b6b;
-    }
-    .bracket {
-      display: flex;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      justify-content: center;
-      margin-bottom: 40px;
-    }
-    .round {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 0 15px;
-    }
-    .match {
-      border: 1px solid #415a77;
-      padding: 10px;
-      margin: 10px 0;
-      width: 160px;
-      text-align: center;
-      background-color: #1b263b;
     }
   </style>
 </head>
@@ -121,43 +128,37 @@
     </thead>
     <tbody>
       <tr><td>1</td><td>Los Delfines</td><td>9</td><td>12</td><td>3</td><td>+9</td></tr>
-    </tbody>
-  </table>
-
-  <h2>Fecha 1</h2>
-  <table>
-    <thead>
-      <tr><th>Local</th><th>Goles L</th><th>Rojas L</th><th>Goles V</th><th>Rojas V</th><th>Visitante</th><th>Sede</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>Los Delfines</td><td>3</td><td>0</td><td>1</td><td>0</td><td>Bruma FC</td><td>Playa Norte</td></tr>
+      <!-- agregá más equipos aquí -->
     </tbody>
   </table>
 </div>
 
 <div id="elim" class="tab-content">
-  <h2>Eliminatorias - Bracket</h2>
-  <div class="bracket">
+  <h2>Eliminatorias</h2>
+
+  <div class="bracket-stage">
     <div class="round">
-      <h3>Octavos</h3>
-      <div class="match">Equipo 1 vs Equipo 12</div>
-      <div class="match">Equipo 2 vs Equipo 11</div>
+      <h3>1ra Ronda</h3>
+      <div class="match"><span>Equipo 1</span><span>vs</span><span>Equipo 2</span></div>
+      <div class="match"><span>Equipo 3</span><span>vs</span><span>Equipo 4</span></div>
+      <div class="match"><span>Equipo 5</span><span>vs</span><span>Equipo 6</span></div>
+      <div class="match"><span>Equipo 7</span><span>vs</span><span>Equipo 8</span></div>
+      <div class="match"><span>Equipo 9</span><span>vs</span><span>Equipo 10</span></div>
+      <div class="match"><span>Equipo 11</span><span>vs</span><span>Equipo 12</span></div>
     </div>
+
     <div class="round">
-      <h3>Cuartos</h3>
-      <div class="match">Ganador 1 vs Equipo 5</div>
-      <div class="match">Ganador 2 vs Equipo 6</div>
+      <h3>2da Ronda</h3>
+      <div class="match"><span>Ganador 1</span><span>vs</span><span>Ganador 2</span></div>
+      <div class="match"><span>Ganador 3</span><span>vs</span><span>Ganador 4</span></div>
+      <div class="match"><span>Ganador 5</span><span>vs</span><span>Ganador 6</span></div>
     </div>
-    <div class="round">
-      <h3>Semis</h3>
-      <div class="match">Semi 1</div>
-      <div class="match">Semi 2</div>
-    </div>
+
     <div class="round">
       <h3>Triangular Final</h3>
-      <div class="match">Equipo A vs Equipo B</div>
-      <div class="match">Equipo B vs Equipo C</div>
-      <div class="match">Equipo A vs Equipo C</div>
+      <div class="match"><span>Ganador A</span><span>vs</span><span>Ganador B</span></div>
+      <div class="match"><span>Ganador B</span><span>vs</span><span>Ganador C</span></div>
+      <div class="match"><span>Ganador A</span><span>vs</span><span>Ganador C</span></div>
     </div>
   </div>
 
@@ -167,9 +168,9 @@
       <tr><th>Equipo</th><th>PJ</th><th>PG</th><th>PE</th><th>PP</th><th>GF</th><th>GC</th><th>DG</th><th>Pts</th></tr>
     </thead>
     <tbody>
-      <tr><td>Equipo A</td><td>2</td><td>1</td><td>1</td><td>0</td><td>3</td><td>1</td><td>+2</td><td>4</td></tr>
-      <tr><td>Equipo B</td><td>2</td><td>1</td><td>0</td><td>1</td><td>2</td><td>2</td><td>0</td><td>3</td></tr>
-      <tr><td>Equipo C</td><td>2</td><td>0</td><td>1</td><td>1</td><td>1</td><td>3</td><td>-2</td><td>1</td></tr>
+      <tr><td>Ganador A</td><td>2</td><td>1</td><td>1</td><td>0</td><td>3</td><td>1</td><td>+2</td><td>4</td></tr>
+      <tr><td>Ganador B</td><td>2</td><td>1</td><td>0</td><td>1</td><td>2</td><td>2</td><td>0</td><td>3</td></tr>
+      <tr><td>Ganador C</td><td>2</td><td>0</td><td>1</td><td>1</td><td>1</td><td>3</td><td>-2</td><td>1</td></tr>
     </tbody>
   </table>
 </div>
