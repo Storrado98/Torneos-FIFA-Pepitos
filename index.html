@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Torneo de Playa</title>
+  <style>
+    body {
+      background-color: #0d1b2a;
+      color: #e0e1dd;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #1b263b;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      color: #ffffff;
+      font-size: 2em;
+    }
+    section {
+      margin: 20px;
+    }
+    h2 {
+      color: #ffffff;
+      border-bottom: 2px solid #415a77;
+      padding-bottom: 5px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+    }
+    th, td {
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid #778da9;
+    }
+    th {
+      background-color: #1b263b;
+      color: #e0e1dd;
+    }
+    tr:nth-child(even) {
+      background-color: #1e2f4a;
+    }
+    tr:hover {
+      background-color: #324b6b;
+    }
+    .fecha-titulo {
+      margin-top: 40px;
+      font-size: 1.5em;
+      color: #e0e1dd;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Torneo de Playa - Zona Inicial</h1>
+  </header>
+
+  <section>
+    <h2>Tabla de Posiciones</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Pos</th>
+          <th>Equipo</th>
+          <th>Pts</th>
+          <th>GF</th>
+          <th>GC</th>
+          <th>DG</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Los Delfines</td><td>9</td><td>12</td><td>3</td><td>+9</td></tr>
+        <tr><td>2</td><td>Arena FC</td><td>7</td><td>10</td><td>5</td><td>+5</td></tr>
+        <tr><td>3</td><td>La Brisa</td><td>6</td><td>9</td><td>6</td><td>+3</td></tr>
+        <tr><td>4</td><td>Sombras del Mar</td><td>5</td><td>8</td><td>7</td><td>+1</td></tr>
+        <tr><td>5</td><td>Costanera Boys</td><td>4</td><td>6</td><td>8</td><td>-2</td></tr>
+        <tr><td>6</td><td>Los Tiburones</td><td>3</td><td>5</td><td>10</td><td>-5</td></tr>
+        <tr><td>7</td><td>Mar y Sol</td><td>2</td><td>4</td><td>9</td><td>-5</td></tr>
+        <tr><td>8</td><td>Bruma FC</td><td>1</td><td>3</td><td>11</td><td>-8</td></tr>
+        <!-- Agregá más equipos si querés hasta llegar a 12 -->
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2 class="fecha-titulo">Fecha 1</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Local</th>
+          <th>Goles L</th>
+          <th>Rojas L</th>
+          <th>Goles V</th>
+          <th>Rojas V</th>
+          <th>Visitante</th>
+          <th>Sede</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Los Delfines</td><td>3</td><td>0</td><td>1</td><td>0</td><td>Bruma FC</td><td>Playa Norte</td></tr>
+        <tr><td>Arena FC</td><td>2</td><td>1</td><td>2</td><td>0</td><td>Mar y Sol</td><td>Playa Sur</td></tr>
+        <!-- más partidos -->
+      </tbody>
+    </table>
+
+    <h2 class="fecha-titulo">Fecha 2</h2>
+    <table>
+      <tbody>
+        <tr><td>La Brisa</td><td>1</td><td>0</td><td>0</td><td>0</td><td>Costanera Boys</td><td>Playa Este</td></tr>
+        <tr><td>Sombras del Mar</td><td>0</td><td>0</td><td>3</td><td>1</td><td>Los Tiburones</td><td>Playa Norte</td></tr>
+        <!-- más partidos -->
+      </tbody>
+    </table>
+
+    <h2 class="fecha-titulo">Fecha 3</h2>
+    <table>
+      <tbody>
+        <tr><td>Los Delfines</td><td>2</td><td>0</td><td>2</td><td>0</td><td>La Brisa</td><td>Playa Oeste</td></tr>
+        <!-- más partidos -->
+      </tbody>
+    </table>
+
+    <h2 class="fecha-titulo">Fecha 4</h2>
+    <table>
+      <tbody>
+        <tr><td>Bruma FC</td><td>0</td><td>0</td><td>4</td><td>0</td><td>Sombras del Mar</td><td>Playa Norte</td></tr>
+        <!-- más partidos -->
+      </tbody>
+    </table>
+  </section>
+
+</body>
+</html>
