@@ -58,34 +58,6 @@
       border-bottom: 2px solid #415a77;
       padding-bottom: 5px;
     }
-    .bracket-stage {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-bottom: 40px;
-    }
-    .round {
-      margin: 0 20px;
-    }
-    .round h3 {
-      text-align: center;
-      color: #e0e1dd;
-      margin-bottom: 15px;
-    }
-    .match {
-      background-color: #1b263b;
-      border-left: 4px solid #778da9;
-      margin-bottom: 20px;
-      padding: 10px;
-      width: 200px;
-      color: #e0e1dd;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-    }
-    .match span {
-      display: block;
-      text-align: left;
-      padding: 4px 0;
-    }
     table {
       width: 100%;
       border-collapse: collapse;
@@ -105,6 +77,54 @@
     }
     tr:hover {
       background-color: #324b6b;
+    }
+    .bracket-stage {
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap;
+      margin-bottom: 40px;
+      overflow-x: auto;
+    }
+    .round {
+      margin: 0 20px;
+      min-width: 220px;
+    }
+    .round h3 {
+      text-align: center;
+      color: #e0e1dd;
+      margin-bottom: 15px;
+    }
+    .match {
+      background-color: #1b263b;
+      border-left: 4px solid #778da9;
+      margin-bottom: 20px;
+      padding: 10px;
+      color: #e0e1dd;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    }
+    .match span {
+      display: block;
+      text-align: left;
+      padding: 4px 0;
+    }
+    .bold {
+      font-weight: bold;
+      color: #ffffff;
+    }
+    .champion-box {
+      background-color: #415a77;
+      color: white;
+      padding: 20px;
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3em;
+      border-radius: 10px;
+    }
+    .champion-box img {
+      height: 40px;
+      margin-right: 15px;
     }
   </style>
 </head>
@@ -128,30 +148,44 @@
     </thead>
     <tbody>
       <tr><td>1</td><td>Los Delfines</td><td>9</td><td>12</td><td>3</td><td>+9</td></tr>
-      <!-- agregá más equipos aquí -->
     </tbody>
   </table>
-</div>
 
+  <h2>Fecha 1</h2>
+  <table><thead><tr><th>Local</th><th>Goles L</th><th>Rojas L</th><th>Goles V</th><th>Rojas V</th><th>Visitante</th><th>Sede</th></tr></thead>
+  <tbody><tr><td>Los Delfines</td><td>3</td><td>0</td><td>1</td><td>0</td><td>Bruma FC</td><td>Playa Norte</td></tr></tbody></table>
+
+  <h2>Fecha 2</h2>
+  <table><thead><tr><th>Local</th><th>Goles L</th><th>Rojas L</th><th>Goles V</th><th>Rojas V</th><th>Visitante</th><th>Sede</th></tr></thead>
+  <tbody><tr><td>Arena FC</td><td>2</td><td>1</td><td>2</td><td>0</td><td>Mar y Sol</td><td>Playa Sur</td></tr></tbody></table>
+
+  <h2>Fecha 3</h2>
+  <table><thead><tr><th>Local</th><th>Goles L</th><th>Rojas L</th><th>Goles V</th><th>Rojas V</th><th>Visitante</th><th>Sede</th></tr></thead>
+  <tbody><tr><td>La Brisa</td><td>1</td><td>0</td><td>0</td><td>0</td><td>Costanera Boys</td><td>Playa Este</td></tr></tbody></table>
+
+  <h2>Fecha 4</h2>
+  <table><thead><tr><th>Local</th><th>Goles L</th><th>Rojas L</th><th>Goles V</th><th>Rojas V</th><th>Visitante</th><th>Sede</th></tr></thead>
+  <tbody><tr><td>Bruma FC</td><td>0</td><td>0</td><td>4</td><td>0</td><td>Sombras del Mar</td><td>Playa Norte</td></tr></tbody></table>
+</div>
 <div id="elim" class="tab-content">
   <h2>Eliminatorias</h2>
 
   <div class="bracket-stage">
     <div class="round">
       <h3>1ra Ronda</h3>
-      <div class="match"><span>Equipo 1</span><span>vs</span><span>Equipo 2</span></div>
-      <div class="match"><span>Equipo 3</span><span>vs</span><span>Equipo 4</span></div>
-      <div class="match"><span>Equipo 5</span><span>vs</span><span>Equipo 6</span></div>
-      <div class="match"><span>Equipo 7</span><span>vs</span><span>Equipo 8</span></div>
-      <div class="match"><span>Equipo 9</span><span>vs</span><span>Equipo 10</span></div>
-      <div class="match"><span>Equipo 11</span><span>vs</span><span>Equipo 12</span></div>
+      <div class="match"><span class="bold">Equipo 1</span><span>vs</span><span>Equipo 2</span></div>
+      <div class="match"><span>Equipo 3</span><span>vs</span><span class="bold">Equipo 4</span></div>
+      <div class="match"><span class="bold">Equipo 5</span><span>vs</span><span>Equipo 6</span></div>
+      <div class="match"><span>Equipo 7</span><span>vs</span><span class="bold">Equipo 8</span></div>
+      <div class="match"><span class="bold">Equipo 9</span><span>vs</span><span>Equipo 10</span></div>
+      <div class="match"><span>Equipo 11</span><span>vs</span><span class="bold">Equipo 12</span></div>
     </div>
 
     <div class="round">
       <h3>2da Ronda</h3>
-      <div class="match"><span>Ganador 1</span><span>vs</span><span>Ganador 2</span></div>
-      <div class="match"><span>Ganador 3</span><span>vs</span><span>Ganador 4</span></div>
-      <div class="match"><span>Ganador 5</span><span>vs</span><span>Ganador 6</span></div>
+      <div class="match"><span class="bold">Ganador 1</span><span>vs</span><span>Ganador 2</span></div>
+      <div class="match"><span>Ganador 3</span><span>vs</span><span class="bold">Ganador 4</span></div>
+      <div class="match"><span class="bold">Ganador 5</span><span>vs</span><span>Ganador 6</span></div>
     </div>
 
     <div class="round">
@@ -173,6 +207,11 @@
       <tr><td>Ganador C</td><td>2</td><td>0</td><td>1</td><td>1</td><td>1</td><td>3</td><td>-2</td><td>1</td></tr>
     </tbody>
   </table>
+
+  <div class="champion-box">
+    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Trophy">
+    Campeón: <strong style="margin-left: 10px;">Los Delfines - Juan Pérez</strong>
+  </div>
 </div>
 
 <script>
